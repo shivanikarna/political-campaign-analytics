@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+# Full Kaggle files are large - keep them out of git
+data/*.csv
+data/raw/
+data/*.zip

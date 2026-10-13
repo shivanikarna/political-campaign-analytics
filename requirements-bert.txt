@@ -1,0 +1,5 @@
+# OPTIONAL: enables the "VADER vs BERT" comparison. Install AFTER requirements.txt:
+#   pip install -r requirements-bert.txt
+# On Windows this installs the CPU build of PyTorch (~200 MB); models download on first use (260-670 MB).
+transformers>=4.40
+torch>=2.2
