@@ -39,19 +39,9 @@ python scripts/download_data.py
 Notes
 - Files in `data/` take priority over `data/sample/`. The app also accepts any CSV with `created_at`, `tweet`, `likes`,
   `retweet_count` and a `candidate` column (pre-merged copies of the dataset).
-- By default each campaign is randomly sampled to **25,000 tweets** (seeded, reproducible) so it stays fast. Change this under
-  *Data settings* in the sidebar; "All" needs roughly 3-6 GB of RAM on the full 1.7M rows.
+- By default each campaign is randomly sampled to **8000 tweets** (seeded, reproducible) so it stays fast. 
 - A tweet containing both #Trump and #Biden appears in both campaigns (that's how the dataset was collected).
 
-## Optional: BERT comparison
-
-The *Sentiment: VADER vs BERT* tab works only if the extra packages are installed; without them it shows a notice and
-everything else works normally.
-
-```powershell
-pip install -r requirements-bert.txt
-streamlit run app.py
-```
 
 Choose a model, choose how many tweets to score (stratified by campaign) and press **Run BERT**. The model downloads on the
 first run (260-670 MB) and needs internet access once. You then get agreement %, Cohen's kappa, a VADER-vs-BERT confusion
